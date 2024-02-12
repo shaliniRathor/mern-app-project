@@ -16,7 +16,7 @@ function Update() {
 
 
   const getsingleUser = async () => {
-    const response = await fetch(`http://localhost:5000/get/single/user/${id}`);
+    const response = await fetch(`https://mern-backend-0dsn.onrender.com/get/single/user/${id}`);
     const result = await response.json();
 
     if (response.ok) {
@@ -40,7 +40,7 @@ function Update() {
     const updatedUser = { name, email, age };
     console.log(updatedUser);
 
-    const response = await fetch(`http://localhost:5000/edit/${id}`, {
+    const response = await fetch(`https://mern-backend-0dsn.onrender.com/edit/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

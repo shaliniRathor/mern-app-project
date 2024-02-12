@@ -10,7 +10,7 @@ function Read() {
 
   async function getData() {
 
-    const response = await fetch("http://localhost:5000/allUser");
+    const response = await fetch("https://mern-backend-0dsn.onrender.com/allUser");
 
     const result = await response.json();
 
@@ -38,7 +38,7 @@ function Read() {
     const done= window.confirm("do u want to delete?")
     console.log(done);
     if (done) {
-      const response = await fetch (`http://localhost:5000/delete/${id}`,{
+      const response = await fetch (`https://mern-backend-0dsn.onrender.com/delete/${id}`,{
         method: "DELETE",
       });
   
@@ -65,7 +65,7 @@ function Read() {
   }
 
   // async function getData(id){
-  //   const response = await fetch (`http://localhost:5000/edit/${id}`)
+  //   const response = await fetch (`https://mern-backend-0dsn.onrender.com/edit/${id}`)
   //   const result= await response.json();
   //   console.log("result...", result);
   //   if (!response.ok) {
